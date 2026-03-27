@@ -97,7 +97,6 @@ export default function Services() {
   return (
     <section id="services" className="py-24 bg-cream">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        {/* Section Header */}
         <div className="text-center mb-20">
           <p className="section-subtitle mb-3">What We Offer</p>
           <h2 className="section-title mb-6">
@@ -111,8 +110,6 @@ export default function Services() {
             passion to every event we manage across India.
           </p>
         </div>
-
-        {/* Services */}
         <div className="space-y-24">
           {services.map((service, i) => (
             <div
@@ -120,10 +117,8 @@ export default function Services() {
               id={service.id}
               className={`flex flex-col ${i % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 lg:gap-16 items-center`}
             >
-              {/* Image */}
               <div className="w-full lg:w-1/2 group">
                 <div className="relative overflow-hidden">
-                  {/* Gold border accent */}
                   <div className={`absolute -inset-3 bg-gradient-to-br ${service.accent} blur-xl opacity-60`} />
                   <div className="relative">
                     <div className="absolute inset-0 border-2 border-gold-400/30 z-10 pointer-events-none" />
@@ -134,7 +129,6 @@ export default function Services() {
                       height={560}
                       className="w-full h-80 lg:h-[420px] object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    {/* Service badge */}
                     <div className="absolute bottom-4 left-4 bg-charcoal/90 backdrop-blur-sm px-4 py-2 flex items-center gap-2">
                       <span className="text-xl">{service.icon}</span>
                       <span className="font-jost text-white text-xs tracking-widest uppercase">{service.title}</span>
@@ -142,8 +136,6 @@ export default function Services() {
                   </div>
                 </div>
               </div>
-
-              {/* Content */}
               <div className="w-full lg:w-1/2">
                 <p className="font-cormorant text-gold-600 text-lg italic mb-2">{service.subtitle}</p>
                 <h3 className="font-playfair text-3xl md:text-4xl font-bold text-charcoal mb-4">
@@ -151,7 +143,6 @@ export default function Services() {
                 </h3>
                 <div className="h-0.5 w-16 bg-gold-gradient mb-6" />
                 <p className="font-jost text-gray-600 leading-relaxed mb-8">{service.description}</p>
-
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
                   {service.features.map((feat) => (
                     <li key={feat} className="flex items-start gap-3">
@@ -162,7 +153,6 @@ export default function Services() {
                     </li>
                   ))}
                 </ul>
-
                 <a
                   href="#contact"
                   className="inline-flex items-center gap-3 font-jost text-sm font-600 tracking-widest uppercase text-charcoal bg-gold-gradient px-7 py-3.5 hover:scale-105 transition-transform duration-300"

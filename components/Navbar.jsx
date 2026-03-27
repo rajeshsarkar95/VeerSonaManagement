@@ -17,9 +17,9 @@ export default function Navbar() {
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
     window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll',onScroll)
   }, [])
-
+  
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -38,8 +38,6 @@ export default function Navbar() {
               Event Management
             </span>
           </a>
-
-          {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <a key={link.label} href={link.href} className="nav-link">

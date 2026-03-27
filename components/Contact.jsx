@@ -8,26 +8,22 @@ const eventTypes = [
 
 export default function Contact() {
   const [form, setForm] = useState({
-    name: '', email: '', phone: '', eventType: '', date: '', message: ''
+    name: '', email:'', phone:'',eventType:'', date:'', message: ''
   })
-  const [submitted, setSubmitted] = useState(false)
-
+  const [submitted, setSubmitted] = useState(false);
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
-
-  const handleSubmit = (e) => {
+  
+  const handleSubmit = (e) =>{
     e.preventDefault()
     setSubmitted(true)
   }
 
   return (
     <section id="contact" className="py-24 bg-charcoal relative overflow-hidden">
-      {/* Decorative */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold-500/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gold-600/5 rounded-full blur-3xl" />
-
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          {/* Left */}
           <div>
             <p className="font-cormorant text-gold-400 text-xl italic mb-3">Let's Create Together</p>
             <h2 className="font-playfair text-4xl md:text-5xl font-bold text-white mb-6">
@@ -38,8 +34,6 @@ export default function Contact() {
               Tell us about your dream event and we'll craft the perfect plan for you.
               Our team typically responds within 2 hours.
             </p>
-
-            {/* Contact details */}
             <div className="space-y-6 mb-10">
               {[
                 {
@@ -49,8 +43,8 @@ export default function Contact() {
                     </svg>
                   ),
                   label: 'Call / WhatsApp',
-                  value: '+91 98765 43210',
-                  href: 'tel:+919876543210',
+                  value: '+91 7467869777',
+                  href: '+91 7534853541',
                 },
                 {
                   icon: (
@@ -59,8 +53,8 @@ export default function Contact() {
                     </svg>
                   ),
                   label: 'Email Us',
-                  value: 'hello@momentsandmilestones.in',
-                  href: 'mailto:hello@momentsandmilestones.in',
+                  value: 'info@veersona.com',
+                  href: 'info@veersona.com',
                 },
                 {
                   icon: (
@@ -70,7 +64,7 @@ export default function Contact() {
                     </svg>
                   ),
                   label: 'Head Office',
-                  value: 'Connaught Place, New Delhi — 110001',
+                  value: 'India pilibhit',
                   href: '#',
                 },
               ].map((item) => (
@@ -89,8 +83,6 @@ export default function Contact() {
                 </a>
               ))}
             </div>
-
-            {/* Social */}
             <div>
               <p className="font-jost text-xs text-white/40 tracking-widest uppercase mb-4">Follow Us</p>
               <div className="flex gap-3">
@@ -107,8 +99,6 @@ export default function Contact() {
               </div>
             </div>
           </div>
-
-          {/* Right — Form */}
           <div className="bg-white/3 backdrop-blur-sm border border-white/10 p-8 md:p-10">
             {submitted ? (
               <div className="flex flex-col items-center justify-center py-16 text-center">
@@ -222,7 +212,6 @@ export default function Contact() {
                     className="w-full bg-white/5 border border-white/10 focus:border-gold-500 text-white placeholder-white/30 px-4 py-3 font-jost text-sm outline-none transition-colors duration-300 resize-none"
                   />
                 </div>
-
                 <button
                   type="submit"
                   className="w-full bg-gold-gradient text-charcoal font-jost font-600 text-sm tracking-widest uppercase py-4 hover:opacity-90 transition-opacity duration-300 flex items-center justify-center gap-3"

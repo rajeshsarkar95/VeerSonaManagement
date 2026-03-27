@@ -58,20 +58,15 @@ const reasons = [
 export default function WhyUs() {
   return (
     <section id="why-us" className="py-24 bg-charcoal relative overflow-hidden">
-      {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
           backgroundImage: 'repeating-linear-gradient(45deg, #c99208 0, #c99208 1px, transparent 0, transparent 50%)',
           backgroundSize: '24px 24px',
         }} />
       </div>
-
-      {/* Gold circles */}
       <div className="absolute top-20 right-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-gold-600/5 rounded-full blur-3xl" />
-
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-        {/* Header */}
         <div className="text-center mb-16">
           <p className="font-cormorant text-gold-400 text-xl italic mb-3">The Moments & Milestones Difference</p>
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-white mb-6">
@@ -85,35 +80,25 @@ export default function WhyUs() {
             craftsmanship that sets us apart.
           </p>
         </div>
-
-        {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {reasons.map((r, i) => (
             <div
               key={r.title}
               className="group relative p-8 border border-white/5 bg-white/3 backdrop-blur-sm hover:border-gold-500/40 transition-all duration-500 hover:-translate-y-1"
             >
-              {/* Corner accent */}
               <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-gold-500/0 group-hover:border-gold-500/60 transition-all duration-500" />
               <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-gold-500/0 group-hover:border-gold-500/60 transition-all duration-500" />
-
-              {/* Icon */}
               <div className="w-16 h-16 bg-gold-500/10 group-hover:bg-gold-500/20 rounded-none flex items-center justify-center text-gold-400 mb-6 transition-colors duration-300">
                 {r.icon}
               </div>
-
               <h3 className="font-playfair text-xl font-bold text-white mb-3">{r.title}</h3>
               <p className="font-jost text-sm text-white/55 leading-relaxed">{r.desc}</p>
-
-              {/* Number */}
               <div className="absolute top-6 right-6 font-playfair text-5xl font-bold text-white/5 group-hover:text-gold-500/10 transition-colors duration-300">
                 {String(i + 1).padStart(2, '0')}
               </div>
             </div>
           ))}
         </div>
-
-        {/* Bottom CTA */}
         <div className="text-center mt-16">
           <p className="font-cormorant text-white/60 text-lg italic mb-6">
             Ready to experience the difference?

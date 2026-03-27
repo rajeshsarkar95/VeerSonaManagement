@@ -59,13 +59,10 @@ export default function Testimonials() {
 
   return (
     <section className="py-24 bg-cream relative overflow-hidden">
-      {/* Background text */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-playfair text-[12rem] font-bold text-gray-100 select-none pointer-events-none whitespace-nowrap">
         Reviews
       </div>
-
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-        {/* Header */}
         <div className="text-center mb-16">
           <p className="section-subtitle mb-3">Voices of Joy</p>
           <h2 className="section-title mb-6">
@@ -75,21 +72,14 @@ export default function Testimonials() {
             <span className="text-gold-400 text-lg">✦</span>
           </div>
         </div>
-
-        {/* Featured testimonial */}
         <div className="max-w-4xl mx-auto mb-12">
           <div className="relative bg-white p-10 md:p-14 shadow-xl">
-            {/* Gold corner */}
             <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-gold-400" />
             <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-gold-400" />
-
-            {/* Quote mark */}
             <div className="font-playfair text-8xl text-gold-200 leading-none mb-4 -mt-4">"</div>
-
             <p className="font-cormorant text-xl md:text-2xl text-gray-700 leading-relaxed italic mb-8">
               {testimonials[active].text}
             </p>
-
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div className="flex items-center gap-4">
                 <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-gold-300">
@@ -115,18 +105,15 @@ export default function Testimonials() {
             </div>
           </div>
         </div>
-
-        {/* Thumbnails */}
         <div className="flex flex-wrap justify-center gap-4">
           {testimonials.map((t, i) => (
             <button
               key={i}
               onClick={() => setActive(i)}
-              className={`flex items-center gap-3 p-3 pr-5 border transition-all duration-300 ${
-                active === i
+              className={`flex items-center gap-3 p-3 pr-5 border transition-all duration-300 ${active === i
                   ? 'border-gold-400 bg-white shadow-md'
                   : 'border-gray-200 hover:border-gold-300'
-              }`}
+                }`}
             >
               <div className={`w-10 h-10 rounded-full overflow-hidden border-2 ${active === i ? 'border-gold-400' : 'border-gray-200'}`}>
                 <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
@@ -138,8 +125,6 @@ export default function Testimonials() {
             </button>
           ))}
         </div>
-
-        {/* Trust badges */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 text-center">
           {[
             { value: '500+', label: 'Events Completed' },

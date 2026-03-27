@@ -33,7 +33,6 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background slides */}
       {slides.map((slide, i) => (
         <div
           key={i}
@@ -50,15 +49,9 @@ export default function Hero() {
           />
         </div>
       ))}
-
-      {/* Gradient overlay */}
       <div className="absolute inset-0 bg-hero-gradient" />
-
-      {/* Decorative gold border frame */}
       <div className="absolute inset-6 md:inset-10 border border-gold-500/20 pointer-events-none" />
       <div className="absolute inset-8 md:inset-12 border border-gold-500/10 pointer-events-none" />
-
-      {/* Corner ornaments */}
       {['top-6 left-6', 'top-6 right-6', 'bottom-6 left-6', 'bottom-6 right-6'].map((pos, i) => (
         <div key={i} className={`absolute ${pos} w-8 h-8 md:w-12 md:h-12 pointer-events-none`}>
           <div className={`absolute border-gold-400 border-opacity-60 ${
@@ -69,10 +62,7 @@ export default function Hero() {
           }`} />
         </div>
       ))}
-
-      {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-        {/* Pre-title */}
         <div className="flex items-center justify-center gap-4 mb-6 animate-fade-up" style={{ animationDelay: '0.1s', opacity: 0 }}>
           <div className="h-px w-12 bg-gold-400" />
           <span className="font-jost text-gold-400 text-xs tracking-[0.4em] uppercase">
@@ -80,8 +70,6 @@ export default function Hero() {
           </span>
           <div className="h-px w-12 bg-gold-400" />
         </div>
-
-        {/* Main headline */}
         <h1
           className="font-playfair text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-6 animate-fade-up"
           style={{ animationDelay: '0.3s', opacity: 0 }}
@@ -91,8 +79,6 @@ export default function Hero() {
           <br className="hidden md:block" /> into a Memorable{' '}
           <span className="italic font-normal">Experience</span>
         </h1>
-
-        {/* Subtitle */}
         <p
           className="font-cormorant text-xl md:text-2xl text-white/75 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-up"
           style={{ animationDelay: '0.5s', opacity: 0 }}
@@ -100,8 +86,6 @@ export default function Hero() {
           From dream weddings to grand corporate galas — we craft moments that last a lifetime,
           with elegance and precision across all of India.
         </p>
-
-        {/* CTAs */}
         <div
           className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-up"
           style={{ animationDelay: '0.7s', opacity: 0 }}
@@ -119,16 +103,14 @@ export default function Hero() {
             Explore Services
           </a>
         </div>
-
-        {/* Stats */}
         <div
           className="grid grid-cols-3 gap-4 mt-16 max-w-md mx-auto animate-fade-up"
           style={{ animationDelay: '0.9s', opacity: 0 }}
         >
           {[
-            { value: '500+', label: 'Events Done' },
-            { value: '12+', label: 'Years Experience' },
-            { value: '98%', label: 'Happy Clients' },
+            { value: '500+',label:'Events Done'},
+            { value: '12+',label:'Years Experience'},
+            { value: '98%',label: 'Happy Clients'},
           ].map((stat) => (
             <div key={stat.label} className="text-center border-r last:border-0 border-white/20">
               <div className="font-playfair text-3xl font-bold gold-text">{stat.value}</div>
@@ -137,8 +119,6 @@ export default function Hero() {
           ))}
         </div>
       </div>
-
-      {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-float">
         <span className="font-jost text-xs text-white/40 tracking-widest uppercase">Scroll</span>
         <div className="w-px h-12 bg-gradient-to-b from-gold-400 to-transparent" />

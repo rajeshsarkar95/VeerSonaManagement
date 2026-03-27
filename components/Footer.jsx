@@ -17,11 +17,11 @@ const footerLinks = {
     { label: '+91 7467869777', href: '+91 7534853541' },
     { label: 'info@veersona.com', href: 'info@veersona.com' },
     { label: 'India', href: '#' },
-    { label: 'PAN India Service', href: '#' },
+    { label: 'PAN India Service', href:'#'},
   ],
 }
 
-export default function Footer() {
+export default function Footer(){
   return (
     <footer className="bg-[#111] border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
@@ -40,7 +40,7 @@ export default function Footer() {
               PAN India service across 25+ cities.
             </p>
             <div className="flex gap-3">
-              {['In', 'Fb', 'Yt', 'Pi'].map((s) => (
+              {['In', 'Fb', 'Yt', 'Pi'].map((s)=>(
                 <a
                   key={s}
                   href="#"
