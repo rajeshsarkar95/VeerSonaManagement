@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream text-charcoal font-jost;
+  }
+}
+
+@layer components {
+  .gold-text {
+    background: linear-gradient(135deg, #c99208, #f5ce2a, #c99208);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s linear infinite;
+  }
+
+  .gold-border {
+    border: 1px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+      linear-gradient(135deg, #c99208, #f8e263, #c99208) border-box;
+  }
+
+  .section-title {
+    @apply font-playfair text-4xl md:text-5xl font-bold text-charcoal;
+  }
+
+  .section-subtitle {
+    @apply font-cormorant text-xl md:text-2xl text-gold-700 italic;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center gap-2 bg-gold-gradient px-8 py-4 font-jost font-600 text-charcoal tracking-widest uppercase text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gold-500/30;
+    background-size: 200% auto;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border border-gold-500 px-8 py-4 font-jost font-500 text-gold-600 tracking-widest uppercase text-sm transition-all duration-300 hover:bg-gold-500 hover:text-charcoal;
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl;
+  }
+
+  .decorative-line {
+    @apply flex items-center gap-4;
+  }
+
+  .decorative-line::before,
+  .decorative-line::after {
+    content: '';
+    @apply flex-1 h-px bg-gradient-to-r from-transparent to-gold-400;
+  }
+
+  .decorative-line::before {
+    @apply bg-gradient-to-l from-transparent to-gold-400;
+  }
+
+  .nav-link {
+    @apply font-jost text-sm tracking-widest uppercase text-white/80 hover:text-gold-400 transition-colors duration-300 relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-0 h-px bg-gold-400 transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+}
+
+@layer utilities {
+  .font-600 {
+    font-weight: 600;
+  }
+  .font-500 {
+    font-weight: 500;
+  }
+  .text-shadow-gold {
+    text-shadow: 0 0 40px rgba(232, 185, 13, 0.4);
+  }
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  }
+}
