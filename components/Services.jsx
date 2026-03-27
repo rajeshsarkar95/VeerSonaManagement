@@ -73,24 +73,26 @@ const services = [
     accent: 'from-purple-400/20 to-pink-500/10',
     icon: '🎂',
   },
+
   {
-    id: 'photo',
-    title: 'Photoshoot & Videography',
-    subtitle: 'Cinematic Memories, Forever',
-    description:
-      'Our professional photographers and videographers capture the emotion, beauty, and stories of your most precious moments.',
-    image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=80',
-    features: [
-      'Wedding photography & films',
-      'Pre-wedding shoots',
-      'Cinematic highlight videos',
-      'Drone aerial photography',
-      'Corporate & product shoots',
-      'Photo booth setups',
-    ],
-    accent: 'from-emerald-400/20 to-teal-500/10',
-    icon: '📸',
-  },
+  id: 'election',
+  title: 'Election Prachar & Campaigning',
+  subtitle: 'Winning Campaigns, Strong Public Reach',
+  description:
+    'We provide complete election promotion services including digital marketing, ground campaigns, and political branding to help candidates connect with voters effectively.',
+  image: 'https://plus.unsplash.com/premium_photo-1705317716028-ceaa9f2d1786?q=80&w=1074&auto=format&fit=crop',
+  features: [
+    'Political campaign strategy',
+    'Social media promotion (Facebook, Instagram)',
+    'Banner, poster & hoarding design',
+    'Rally & event management',
+    'Video ads & speech coverage',
+    'WhatsApp & bulk SMS campaigns',
+  ],
+  accent: 'from-orange-400/20 to-red-500/10',
+  icon: '🗳️',
+}
+
 ]
 
 export default function Services() {

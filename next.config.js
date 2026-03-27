@@ -6,8 +6,12 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'images.unsplash.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'plus.unsplash.com',
+      },
     ],
   },
-}
+};
 
-module.exports = nextConfig
+export default nextConfig;
