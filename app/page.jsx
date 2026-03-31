@@ -1,26 +1,26 @@
 "use client"
-import Navbar from '../components/Navbar'
-import Hero from '../components/Hero'
-import Services from '../components/Services'
-import WhyUs from '../components/WhyUs'
-import Gallery from '../components/Gallery'
-import Testimonials from '../components/Testimonials'
-import Contact from '../components/Contact'
-import Footer from '../components/Footer'
-import LoginModal from '../components/LoginModal'
-import { useState } from 'react'
+// import Navbar from '../components/Navbar'
+// import Hero from '../components/Hero'
+// import Services from '../components/Services'
+// import WhyUs from '../components/WhyUs'
+// import Gallery from '../components/Gallery'
+// import Testimonials from '../components/Testimonials'
+// import Contact from '../components/Contact'
+// import Footer from '../components/Footer'
+// import LoginModal from '../components/LoginModal'
+// import { useState } from 'react'
 
 export default function Home(){
   const [open, setOpen] = useState(false);
 
   return (
     <main>
-      <LoginModal
+      {/* <LoginModal
         isOpen={open}
         onClose={()=>setOpen(false)}
-      />
-      <Navbar/>
-      <Hero/>
+      /> */}
+      {/* <Navbar/> */}
+      {/* <Hero/> */}
       <div className="bg-gold-500 py-3 overflow-hidden">
         <div className="flex animate-[marquee_20s_linear_infinite] whitespace-nowrap">
           {[...Array(4)].map((_, i)=>(
@@ -30,12 +30,12 @@ export default function Home(){
           ))}
         </div>
       </div>
-      <Services/>
-      <WhyUs/>
-      <Gallery/>
-      <Testimonials/>
-      <Contact/>
-      <Footer/>
+      {/* <Services/> */}
+      {/* <WhyUs/> */}
+      {/* <Gallery/> */}
+      {/* <Testimonials/> */}
+      {/* <Contact/> */}
+      {/* <Footer/> */}
       <a
         href="https://wa.me/919876543210"
         target="_blank"
