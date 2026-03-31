@@ -11,7 +11,7 @@ export default function Contact() {
     name: '', email:'', phone:'',eventType:'', date:'', message: ''
   })
   const [submitted, setSubmitted] = useState(false);
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
+  const handleChange = (e) => setForm({ ...form,[e.target.name]:e.target.value})
   
   const handleSubmit = (e) =>{
     e.preventDefault()
@@ -29,7 +29,7 @@ export default function Contact() {
             <h2 className="font-playfair text-4xl md:text-5xl font-bold text-white mb-6">
               Get a <span className="gold-text">Free Quote</span>
             </h2>
-            <div className="h-0.5 w-16 bg-gold-gradient mb-8" />
+            <div className="h-0.5 w-16 bg-gold-gradient mb-8"/>
             <p className="font-jost text-white/60 leading-relaxed mb-10">
               Tell us about your dream event and we'll craft the perfect plan for you.
               Our team typically responds within 2 hours.

@@ -10,33 +10,32 @@ import Footer from '../components/Footer'
 import LoginModal from '../components/LoginModal'
 import { useState } from 'react'
 
-
-export default function Home() {
+export default function Home(){
   const [open, setOpen] = useState(false);
 
   return (
     <main>
       <LoginModal
         isOpen={open}
-        onClose={() => setOpen(false)}
+        onClose={()=>setOpen(false)}
       />
-      <Navbar />
-      <Hero />
+      <Navbar/>
+      <Hero/>
       <div className="bg-gold-500 py-3 overflow-hidden">
         <div className="flex animate-[marquee_20s_linear_infinite] whitespace-nowrap">
-          {[...Array(4)].map((_, i) => (
+          {[...Array(4)].map((_, i)=>(
             <span key={i} className="font-jost text-xs tracking-widest uppercase text-charcoal mx-8 flex-shrink-0">
               ✦ Weddings &nbsp;&nbsp; ✦ Corporate Events &nbsp;&nbsp; ✦ Birthday Parties &nbsp;&nbsp; ✦ Photography &amp; Films &nbsp;&nbsp; ✦ PAN India Service &nbsp;&nbsp; ✦ 12+ Years Experience &nbsp;&nbsp; ✦ 500+ Events
             </span>
           ))}
         </div>
       </div>
-      <Services />
-      <WhyUs />
-      <Gallery />
-      <Testimonials />
-      <Contact />
-      <Footer />
+      <Services/>
+      <WhyUs/>
+      <Gallery/>
+      <Testimonials/>
+      <Contact/>
+      <Footer/>
       <a
         href="https://wa.me/919876543210"
         target="_blank"

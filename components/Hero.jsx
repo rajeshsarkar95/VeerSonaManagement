@@ -49,7 +49,7 @@ export default function Hero() {
           />
         </div>
       ))}
-      <div className="absolute inset-0 bg-hero-gradient" />
+      <div className="absolute inset-0 bg-hero-gradient"/>
       <div className="absolute inset-6 md:inset-10 border border-gold-500/20 pointer-events-none" />
       <div className="absolute inset-8 md:inset-12 border border-gold-500/10 pointer-events-none" />
       {['top-6 left-6', 'top-6 right-6', 'bottom-6 left-6', 'bottom-6 right-6'].map((pos, i) => (
@@ -105,7 +105,7 @@ export default function Hero() {
         </div>
         <div
           className="grid grid-cols-3 gap-4 mt-16 max-w-md mx-auto animate-fade-up"
-          style={{ animationDelay: '0.9s', opacity: 0 }}
+          style={{animationDelay:'0.9s', opacity:0}}
         >
           {[
             { value: '500+',label:'Events Done'},
