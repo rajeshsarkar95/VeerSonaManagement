@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 const LoginModal = ({ isOpen, onClose }) => {
     const [isLogin, setIsLogin] = useState(true);
-
+    
     useEffect(() => {
         const handleEscape = (e) => {
             if (e.key === "Escape") onClose();

@@ -75,24 +75,42 @@ const services = [
   },
 
   {
-  id: 'election',
-  title: 'Election Prachar & Campaigning',
-  subtitle: 'Winning Campaigns, Strong Public Reach',
-  description:
-    'We provide complete election promotion services including digital marketing, ground campaigns, and political branding to help candidates connect with voters effectively.',
-  image: 'https://plus.unsplash.com/premium_photo-1705317716028-ceaa9f2d1786?q=80&w=1074&auto=format&fit=crop',
-  features: [
-    'Political campaign strategy',
-    'Social media promotion (Facebook, Instagram)',
-    'Banner, poster & hoarding design',
-    'Rally & event management',
-    'Video ads & speech coverage',
-    'WhatsApp & bulk SMS campaigns',
-  ],
-  accent: 'from-orange-400/20 to-red-500/10',
-  icon: '🗳️',
-}
+    id: 'election',
+    title: 'Election Prachar & Campaigning',
+    subtitle: 'Winning Campaigns, Strong Public Reach',
+    description:
+      'We provide complete election promotion services including digital marketing, ground campaigns, and political branding to help candidates connect with voters effectively.',
+    image: 'https://plus.unsplash.com/premium_photo-1705317716028-ceaa9f2d1786?q=80&w=1074&auto=format&fit=crop',
+    features: [
+      'Political campaign strategy',
+      'Social media promotion (Facebook, Instagram)',
+      'Banner, poster & hoarding design',
+      'Rally & event management',
+      'Video ads & speech coverage',
+      'WhatsApp & bulk SMS campaigns',
+    ],
+    accent: 'from-orange-400/20 to-red-500/10',
+    icon: '🗳️',
+  },
 
+  {
+    id: 'international-musicians',
+    title: 'International Musician Artists',
+    subtitle: 'World-Class Melodies for Your Elite Events',
+    description:
+      'Bring a touch of global elegance to your event with our premium international musical acts. From soulful soloists to high-energy symphony bands, we provide top-tier artists that create an unforgettable atmosphere.',
+    image: '/musical/international-musicin.jpeg',
+    features: [
+      'Flute Mermaid (Ambient & Visual Performance)',
+      'Full Symphony Band for Grand Openings',
+      'Professional Violin Players (Classical & Modern)',
+      'Expert Saxophone Artists for Cocktail & Jazz Nights',
+      'International Solo Female Instrumentalists',
+      'Customized Musical Themes for Corporate & Weddings'
+    ],
+    accent: 'from-purple-500/20 to-blue-600/10',
+    icon: '🎷',
+  }
 ]
 
 export default function Services() {
@@ -124,6 +142,7 @@ export default function Services() {
                   <div className={`absolute -inset-3 bg-gradient-to-br ${service.accent} blur-xl opacity-60`} />
                   <div className="relative">
                     <div className="absolute inset-0 border-2 border-gold-400/30 z-10 pointer-events-none" />
+
                     <Image
                       src={service.image}
                       alt={service.title}
@@ -131,6 +150,7 @@ export default function Services() {
                       height={560}
                       className="w-full h-80 lg:h-[420px] object-cover transition-transform duration-700 group-hover:scale-105"
                     />
+
                     <div className="absolute bottom-4 left-4 bg-charcoal/90 backdrop-blur-sm px-4 py-2 flex items-center gap-2">
                       <span className="text-xl">{service.icon}</span>
                       <span className="font-jost text-white text-xs tracking-widest uppercase">{service.title}</span>
